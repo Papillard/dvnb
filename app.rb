@@ -2,7 +2,7 @@ require 'rubygems'
 require "sinatra"
 require 'data_mapper'
 
-DataMapper.setup(:default, "postgres://postgres:postgres@localhost:5432/dnb")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://postgres:postgres@localhost:5432/dnb")
 
 class User
   include DataMapper::Resource
