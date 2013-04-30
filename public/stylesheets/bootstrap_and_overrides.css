@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+
+
+body{
+	background-image: transparent;	
+	background-size: 1400px;
+	color:#333;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	padding-top:60px;
+	line-height:18px;
+}
+
+.container{
+	width: 1100px;
+}
+
+a {outline: none;color:rgba(26,155,77,1); }
+a:hover{color:rgba(26,155,77,1); text-decoration:underline}
+a:focus{-moz-outline-style: none;}
+a:focus { outline:none }
+
+h1,h2,h3{
+	font-family: 'ProximaNova-Bold','Arial';
+}
+
+h1{
+	font-size: 50px;
+	line-height: 50px;
+	font-weight: 500;
+}
+
+h4,h5,h6{
+	font-family: 'ProximaNova-Regular','Arial';
+	font-weight: normal;
+}
+
+
+.center{text-align:center;}
+.left-align{text-align:left;}
+.right-align{text-align:right;}
+.justify{text-align: justify; text-justify: newspaper;}
+
+.row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.navbar-fixed-top{
+	background-color:rgba(255,255,255,0.9);
+	border:0;
+	height:60px;
+	line-height:40px;
+	border-bottom:1px solid #f2f2f2;
+}
+
+.navbar .brand{
+	color:#333;
+	padding:0px;
+}
+
+.navbar .nav li{
+	height:60px;
+	line-height:40px;
+}
+
+.navbar .nav li.facebook-like{
+	height: 60px;
+	line-height: 68px;
+	width: 100px;
+}
+
+.btn{
+	font-weight:normal;
+	display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 1);	
+	background: rgba(26,155,77,1);
+	text-decoration: none;
+	color:white;
+	padding:10px;
+	border:0;
+}
+
+.btn:hover{
+	background: rgba(26,155,77,0.6);
+
+	color:white;
+}
+
+#footer{
+	margin-top:0px;
+	background-color:#20272d;
+	height:100px;
+	font-size:13px;
+	color:#fff;
+}
+
+#footer .row{
+	padding-bottom:0;
+	margin-bottom:0;
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+float: left;
+margin-left: 0px;
+margin-right:5px;
+}
+
+select, input, textarea, .uneditable-input {
+width: 250px;
+}
+
+.carousel-control{
+	font-family:"Helvetica Neue", Helvetica;
+}
+
+

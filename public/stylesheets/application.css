@@ -1,0 +1,52 @@
+#logo{
+	margin-top:5px;	
+}
+
+#pavillon{
+	margin-top: -60px;
+	position: fixed;
+	z-index: -1;
+}
+
+#email{
+	height: 30px;
+}
+
+
+#presentation{
+	color: white;
+	padding-top:60px;
+	height:280px;
+}
+
+#presentation h4{
+	font-size: 22px;
+	line-height:30px;
+}
+
+#inscription{
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+
+#langages{
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+.dark{
+	background-color: rgba(0,0,0,0.2);
+}
+
+.light{
+	background: whitesmoke;
+	color: black;
+}
+
+.green{
+	background: rgb(158, 201, 103);
+	color: black;
+}
+
+

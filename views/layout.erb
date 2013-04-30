@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>d&b</title>
+	<meta charset="utf-8">
+	<meta name="title" content="Dev&Breakfast" />
+	<meta name="description" content="Venez développer votre appli à la campagne !" />
+	<link rel="image_src" href="https://www.dropbox.com/s/f69yrdrhp0yoyib/dnb.png" />
+	<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.css">	
+	<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap_and_overrides.css">	
+	<link rel="stylesheet" type="text/css" href="./stylesheets/application.css">	
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+			<a class="brand" href="/"><img src='./images/logo_green.png' width='100px' id="logo" %></a>
+			<ul class="nav pull-right">
+				<li><a href="#" class="about">PROGRAMME</a></li>
+				<li><a href="/postuler"><span class='orange'>POSTULER</span></a><li>	
+			</ul>
+		</div>
+	</div>
+
+
+
+	<%= yield %>
+
+
+	<div class="row-fluid" id="footer">
+		<div class="container">
+			<div class="row">
+			<div class="span3 offset1">
+				<p class="left">&copy; 2013 d&b<br/>
+					Tous droits réservés.</p>
+			</div>
+
+			<div class="span3 offset1">
+				<p class="left">D&B</br>
+				73 Rue du Faubourg Saint-Denis</br>
+				75010 Paris</p>
+			</div>
+
+			<div class="span3 offset1">
+				<p class="left">Contact
+				<br/><a href='mailto:contact@dvnb.fr'>contact@dvnb.fr</a>
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
