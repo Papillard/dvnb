@@ -1,19 +1,24 @@
 require 'rubygems'
 require "sinatra"
-require "sinatra/activerecord"
+require 'data_mapper'
 
-#set :database, "postgres:///dnb.db"
+DataMapper.setup(:default, "postgres://postgres:postgres@localhost:5432/dnb")
 
-class User < ActiveRecord::Base
+class User
+  include DataMapper::Resource
+  property :id, Serial 
+  property :email,  String 
 end
 
+DataMapper.finalize
+DataMapper.auto_migrate!
+
 get "/" do
-  @users = User.order("created_at DESC")
   erb :landing_page
 end
 
 post "/" do 
-  User.create(email: params[:email])
+  User.create(:email=>params[:email])
   @notice_title = "Merci, #{params[:email]}"
   @notice_desc = "Nous te contacterons pour le prochain D&B !"
   erb :landing_page
@@ -22,3 +27,5 @@ end
 helpers do
   # No helpers for the moment !
 end
+
+
