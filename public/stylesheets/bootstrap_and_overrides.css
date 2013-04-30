@@ -47,16 +47,21 @@ h4,h5,h6{
 }
 
 .navbar-fixed-top{
-	background-color:rgba(255,255,255,0.9);
+	background-color:rgba(255,255,255,0.98);
 	border:0;
 	height:60px;
 	line-height:40px;
 	border-bottom:1px solid #f2f2f2;
 }
 
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 1100px;
+}
+
 .navbar .brand{
 	color:#333;
 	padding:0px;
+	margin-left:0;
 }
 
 .navbar .nav li{
@@ -64,11 +69,6 @@ h4,h5,h6{
 	line-height:40px;
 }
 
-.navbar .nav li.facebook-like{
-	height: 60px;
-	line-height: 68px;
-	width: 100px;
-}
 
 .btn{
 	font-weight:normal;
@@ -88,6 +88,27 @@ h4,h5,h6{
 .btn:hover{
 	background: rgba(26,155,77,0.6);
 
+	color:white;
+}
+
+a.btn-grey{
+	font-weight:normal;
+	display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 1);	
+	background: rgba(220,220,220,1);
+	text-decoration: none;
+	color:white;
+	padding:10px;
+	border:0;
+}
+
+a.btn-grey:hover;{
+	background: rgba(150,150,150,1);
+	text-decoration: none;
 	color:white;
 }
 

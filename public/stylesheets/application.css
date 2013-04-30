@@ -1,3 +1,7 @@
+#footer{
+	padding-top:30px;
+}
+
 #logo{
 	margin-top:5px;	
 }
@@ -21,7 +25,7 @@
 
 #presentation h4{
 	font-size: 22px;
-	line-height:30px;
+	line-height:50px;
 }
 
 #inscription{
@@ -37,16 +41,17 @@
 
 .dark{
 	background-color: rgba(0,0,0,0.2);
+	color:whitesmoke;
 }
 
 .light{
 	background: whitesmoke;
-	color: black;
+	color: rgb(70,70,70);
 }
 
 .green{
-	background: rgb(158, 201, 103);
-	color: black;
+	background: rgba(158, 201, 103, 0.95);
+	color: rgb(70,70,70);
 }
 
 #notice{
@@ -54,6 +59,11 @@
 	color:white;
 	border-radius:10px;
 	padding:20px;
+}
+
+.avg{
+	font-size: 18px;
+	line-height: 40px;
 }
 
 
