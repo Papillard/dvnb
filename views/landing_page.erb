@@ -3,10 +3,12 @@
 <div class="row-fluid dark" id="presentation">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span4" id="notice">
-				<h4 style="color:rgba(158, 201, 103,1)"><%=@notice_title if @notice_title%></h4>
-				<h5><%=@notice_desc if @notice_desc%></h5>
-			</div>
+			<% if @notice_title %>
+				<div class="span4" id="notice">
+					<h4 style="color:rgba(158, 201, 103,1)"><%=@notice_title%></h4>
+					<h5><%=@notice_desc%></h5>
+				</div>
+			<% end %>
 
 			<div class="span6 pull-right", style="text-align:right">
 				<h1>DEV & BREAKFAST</h1> 
