@@ -2,15 +2,28 @@
 
 <div class="row-fluid dark" id="presentation">
 	<div class="container">
-		<div class="span6 pull-right", style="text-align:right">
-			<h1>DEV & BREAKFAST</h1> 
-			<h4>Codez 6h par jour<h4>
-				<h4>Créez votre site à la campagne</h4>
-				<h4>Collaborer avec des développeurs professionnels</h4>
+		<div class="row-fluid">
+			<div class="span4" id="notice">
+				<h4 style="color:rgba(158, 201, 103,1)"><%=@notice_title if @notice_title%></h4>
+				<h5><%=@notice_desc if @notice_desc%></h5>
+			</div>
+
+			<div class="span6 pull-right", style="text-align:right">
+				<h1>DEV & BREAKFAST</h1> 
+				<h4>Codez 6h par jour<h4>
+					<h4>Créez votre site à la campagne</h4>
+					<h4>Collaborer avec des développeurs professionnels</h4>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+$(function(){
+	$("#notice").delay(500).fadeOut(2000);
+});
+</script>
 
 <div class="row-fluid light" id="inscription">
 	<div class="container">

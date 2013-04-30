@@ -49,4 +49,11 @@
 	color: black;
 }
 
+#notice{
+	background: rgba(158, 201, 103,0.3);
+	color:white;
+	border-radius:10px;
+	padding:20px;
+}
+
 
