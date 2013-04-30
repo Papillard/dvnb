@@ -2,7 +2,7 @@ require 'rubygems'
 require "sinatra"
 require "sinatra/activerecord"
 
-set :database, "sqlite3:///dnb.db"
+#set :database, "postgres:///dnb.db"
 
 class User < ActiveRecord::Base
 end
