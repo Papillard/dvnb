@@ -17,6 +17,7 @@ GEM
     builder (3.0.4)
     i18n (0.6.1)
     multi_json (1.7.2)
+    pg (0.15.1)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -53,6 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  pg
   shotgun
   sinatra
   sinatra-activerecord
