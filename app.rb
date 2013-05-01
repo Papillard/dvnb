@@ -8,6 +8,7 @@ class User
   include DataMapper::Resource
   property :id, Serial 
   property :email,  String 
+  validates_presence_of :email
 end
 
 DataMapper.finalize
@@ -23,8 +24,12 @@ end
 
 post "/" do 
   User.create(:email=>params[:email])
-  @notice_title = "Merci, #{params[:email]}"
-  @notice_desc = "Nous te contacterons pour le prochain D&B !"
+  if params[:email].empty?
+    @warning = "Il nous manque ton mail !"
+  else
+    @notice_title = "Merci, #{params[:email]}"
+    @notice_desc = "Nous te contacterons pour le prochain D&B !"
+  end
   erb :landing_page
 end
 

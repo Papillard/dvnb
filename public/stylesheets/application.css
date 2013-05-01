@@ -3,7 +3,7 @@
 }
 
 #logo{
-	margin-top:5px;	
+	margin-top:15px;	
 }
 
 #pavillon{
@@ -36,8 +36,8 @@
 
 
 #coachs{
-	padding-top:50px;
-	padding-bottom:50px;
+	padding-top:30px;
+	padding-bottom:30px;
 }
 
 #program{
@@ -54,12 +54,12 @@
 
 .light{
 	background: whitesmoke;
-	color: rgb(70,70,70);
+	color: rgb(50,50,50);
 }
 
 .green{
-	background: rgba(158, 201, 103, 1);
-	color: rgb(70,70,70);
+	background: rgba(27, 97, 87, 1);
+	color: whitesmoke;
 }
 
 #notice{
@@ -85,15 +85,15 @@
 	height:30px;
 	border-radius:15px;	
 	opacity:0.5;
-	background:black;
+	background:rgb(50,50,50);
 }
 
 .img-twitter:hover,.img-facebook:hover,.img-linkedin:hover{
 	opacity:1;
 }
 
-#pgm-link {outline: none;color:rgb(70,70,70); }
-#pgm-link:hover{color:rgba(50,50,50,1); text-decoration:none}
+#pgm-link {outline: none;color:rgb(50,50,50); }
+#pgm-link:hover{color:rgba(10,10,10,1); text-decoration:none}
 
 
 .center{

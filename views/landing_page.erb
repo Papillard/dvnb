@@ -41,6 +41,9 @@ $(function(){
 					<p style="text-align:justify">Pour atteindre cet objectif, il faudra avoir suivi la première semaine de cours, ou être déjà bien initié à la programmation web. Créer un site, c'est avoir la main dessus, et ne pas être à la merci d'une agence web. Les outils actuels permettent à n'importe qui de coder une web-app, à condition de faire preuve de motivation et de persévérance !<strong> d&b vous rembourse 50% du prix de cette semaine si vous ne parvenez pas à développer votre maquette, ce qui n'arrivera pas !</strong></p>
 				</div>
 			</div>
+			<% if @warning %>
+				<h4 style="color:orange"><%=@warning%></h4>
+			<% end %>
 			<div class="row-fluid">
 				<div class="span12">
 					<form accept-charset="UTF-8" action="/" class="form-inline" method="post">
