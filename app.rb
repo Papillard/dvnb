@@ -25,10 +25,12 @@ end
 post "/" do 
   User.create(:email=>params[:email])
   if params[:email].empty?
-    @warning = "Il nous manque ton mail !"
+    @warning = true
+    @notice_title = "Oups !"
+    @notice_desc = "Nous n'avons pas compris votre mail.."
   else
     @notice_title = "Merci, #{params[:email]}"
-    @notice_desc = "Nous te contacterons pour le prochain D&B !"
+    @notice_desc = "Nous vous contacterons pour le prochain D&B !"
   end
   erb :landing_page
 end

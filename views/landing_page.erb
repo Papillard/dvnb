@@ -4,12 +4,15 @@
 	<div class="container">
 		<div class="row-fluid">
 			<% if @notice_title %>
-				<div class="span4" id="notice">
-					<h4 style="color:rgba(158, 201, 103,1)"><%=@notice_title%></h4>
-					<h5><%=@notice_desc%></h5>
-				</div>
+				<% if @warning %>
+					<div class="span6" id="warning">
+				<% else %>
+					<div class="span6" id="notice">
+				<% end %>
+						<h3 style="color:whitesmoke"><%=@notice_title%></h3>
+						<h4 style="color:white"><%=@notice_desc%></h4>
+					</div>
 			<% end %>
-
 			<div class="span6 pull-right", style="text-align:right">
 				<h1>DEV & BREAKFAST</h1> 
 				<h4>Codez 6h par jour<h4>
@@ -23,6 +26,7 @@
 <script>
 $(function(){
 	$("#notice").delay(2000).fadeOut(2000);
+	$("#warning").delay(2000).fadeOut(2000);
 });
 </script>
 
@@ -31,18 +35,19 @@ $(function(){
 		<div class="span12">
 			<a href="/program" id="pgm-link"><h1>LE PROGRAME D&B</h1></a><br>			
 			<div class="row-fluid">
-				<div class="span6">
+				<div class="span6" style="padding-right:10px">
 					<p class='avg'><strong>Première semaine - 2000€ :</strong> Apprenez à développer une appli web.</p>
-					<p style="text-align:justify"><strong>De la meilleure façon</strong>, avec des cours intensifs donnés par des développeurs expérimentés. En alternant leçons théoriques, exercices, petits projets de groupe, discussion et échanges d'idées sur vos projets. Et en profitant aussi de l'air pur de la campagne, et de la gastronomie locale tant qu'à faire !<p>
+					<p style="text-align:justify">De la meilleure façon ! Avec des cours intensifs donnés par des développeurs expérimentés. En alternant leçons théoriques, exercices, petits projets de groupe, discussion et échanges d'idées sur vos projets. Et en profitant aussi de l'air pur de la campagne, et de la gastronomie locale tant qu'à faire !<p>
 				</div>
 
-				<div class="span6 pull-right">
+				<div class="span6 pull-right" style="padding-left:10px">
 					<p class='avg'><strong>Deuxième semaine - 1500€ :</strong> Développez vous-même votre site.</p>
-					<p style="text-align:justify">Pour atteindre cet objectif, il faudra avoir suivi la première semaine de cours, ou être déjà bien initié à la programmation web. Créer un site, c'est avoir la main dessus, et ne pas être à la merci d'une agence web. Les outils actuels permettent à n'importe qui de coder une web-app, à condition de faire preuve de motivation et de persévérance !<strong> d&b vous rembourse 50% du prix de cette semaine si vous ne parvenez pas à développer votre maquette, ce qui n'arrivera pas !</strong></p>
+					<p style="text-align:justify">Il faudra avoir suivi la première semaine de cours, ou être déjà bien aguerris à la programmation web. Tout le monde peut coder une web-app, à condition d'être bien encadré, de faire preuve de motivation et de persévérance ! d&b vous rembourse <strong>50%</strong> du prix de la semaine si vous ne venez pas à bout de votre maquette.</p>
 				</div>
 			</div>
+			<br>
 			<% if @warning %>
-				<h4 style="color:orange"><%=@warning%></h4>
+				<h4 style="color:orange">Entrez à nouveau votre mail !</h4>
 			<% end %>
 			<div class="row-fluid">
 				<div class="span12">
