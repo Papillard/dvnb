@@ -13,43 +13,11 @@
 </head>
 <body>
 
-	<div class="navbar navbar-fixed-top">
-		<div class="container">
-			<a class="brand" href="/"><img src='./images/logo_green.png' width='100px' id="logo" %></a>
-			<ul class="nav pull-right">
-				<li><a href="#" class="about">PROGRAMME</a></li>
-			</ul>
-		</div>
-	</div>
-	
+	<%= erb(:header, :layout => false) %>
 
 	<%= yield %>
 	
-
-
-	<div class="row-fluid" id="footer">
-		<div class="container">
-			<div class="row-fluid">
-			<div class="span4">
-				<p class="left">&copy; 2013 d&b<br/>
-					Tous droits réservés.</p>
-			</div>
-
-			<div class="span4">
-				<p class="left">d&b</br>
-				73 Rue du Faubourg Saint-Denis</br>
-				75010 Paris</p>
-			</div>
-
-			<div class="span4">
-				<p class="left">Contact
-				<br/><a href='mailto:contact@dvnb.fr'>contact@dvnb.fr</a>
-				</p>
-			</div>
-			</div>
-		</div>
-	</div>
-
+	<%= erb(:footer, :layout => false) %>
 
 </body>
 </html>

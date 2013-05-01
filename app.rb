@@ -17,6 +17,10 @@ get "/" do
   erb :landing_page
 end
 
+get "/program" do
+  erb :program
+end
+
 post "/" do 
   User.create(:email=>params[:email])
   @notice_title = "Merci, #{params[:email]}"

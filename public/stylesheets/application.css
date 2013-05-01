@@ -20,6 +20,7 @@
 #presentation{
 	color: white;
 	padding-top:60px;
+	padding-bottom:10px;
 	height:280px;
 }
 
@@ -34,10 +35,17 @@
 }
 
 
-#langages{
+#coachs{
 	padding-top:50px;
 	padding-bottom:50px;
 }
+
+#program{
+	padding-top:50px;
+	padding-bottom:50px;
+	background:whitesmoke;
+}
+
 
 .dark{
 	background-color: rgba(0,0,0,0.2);
@@ -50,7 +58,7 @@
 }
 
 .green{
-	background: rgba(158, 201, 103, 0.95);
+	background: rgba(158, 201, 103, 1);
 	color: rgb(70,70,70);
 }
 
@@ -66,4 +74,29 @@
 	line-height: 40px;
 }
 
+.img-circle{
+	width:100px;
+	border-radius:50px;	
+	overflow:hidden;
+}
+
+.img-twitter, .img-facebook, .img-linkedin{
+	width:30px;
+	height:30px;
+	border-radius:15px;	
+	opacity:0.5;
+	background:black;
+}
+
+.img-twitter:hover,.img-facebook:hover,.img-linkedin:hover{
+	opacity:1;
+}
+
+#pgm-link {outline: none;color:rgb(70,70,70); }
+#pgm-link:hover{color:rgba(50,50,50,1); text-decoration:none}
+
+
+.center{
+	text-align:center;
+}
 

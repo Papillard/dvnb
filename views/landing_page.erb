@@ -1,4 +1,4 @@
-<img src='./images/pavillon_flou.jpg' width='100%' id="pavillon"%>
+<img src='./images/pavillon_flou.jpg' style="width:1400px" id="pavillon"%>
 
 <div class="row-fluid dark" id="presentation">
 	<div class="container">
@@ -22,23 +22,23 @@
 
 <script>
 $(function(){
-	$("#notice").delay(500).fadeOut(2000);
+	$("#notice").delay(2000).fadeOut(2000);
 });
 </script>
 
 <div class="row-fluid light" id="inscription">
 	<div class="container">
 		<div class="span12">
-			<h1>LE PROGRAME D&B</h1><br>			
+			<a href="/program" id="pgm-link"><h1>LE PROGRAME D&B</h1></a><br>			
 			<div class="row-fluid">
 				<div class="span6">
 					<p class='avg'><strong>Première semaine - 2000€ :</strong> Apprenez à développer une appli web.</p>
-					<p style="text-align:justify"><strong>De la meilleure façon</strong>, avec des cours intensifs donnés par des développeurs expérimentés. En alternant leçons théoriques, exercices, petits projets de groupe. Et en profitant bien sûr de l'air pur de la campagne, et de la gastronomie locale tant qu'à faire !<p>
+					<p style="text-align:justify"><strong>De la meilleure façon</strong>, avec des cours intensifs donnés par des développeurs expérimentés. En alternant leçons théoriques, exercices, petits projets de groupe, discussion et échanges d'idées sur vos projets. Et en profitant aussi de l'air pur de la campagne, et de la gastronomie locale tant qu'à faire !<p>
 				</div>
 
 				<div class="span6 pull-right">
 					<p class='avg'><strong>Deuxième semaine - 1500€ :</strong> Développez vous-même votre site.</p>
-					<p style="text-align:justify">Pour atteindre cet objectif, il faudra avoir suivi la première semaine de cours, ou bien être déjà initié à la programmation web. Créer un site, c'est avoir la main dessus, et ne pas être à la merci d'une agence web. <strong>Nous vous remboursons 50% de cette semaine si jamais vous ne parvenez pas à développer la maquette de votre site.</strong></p>
+					<p style="text-align:justify">Pour atteindre cet objectif, il faudra avoir suivi la première semaine de cours, ou être déjà bien initié à la programmation web. Créer un site, c'est avoir la main dessus, et ne pas être à la merci d'une agence web. Les outils actuels permettent à n'importe qui de coder une web-app, à condition de faire preuve de motivation et de persévérance !<strong> d&b vous rembourse 50% du prix de cette semaine si vous ne parvenez pas à développer votre maquette, ce qui n'arrivera pas !</strong></p>
 				</div>
 			</div>
 			<div class="row-fluid">
@@ -58,26 +58,54 @@ $(function(){
 </div>
 
 
-
-<div class="row-fluid green" id="langages">
+<div class="row-fluid green" id="coachs">
 	<div class="container">
 		<div class="span12 pull-right" style="text-align:right">
-			<h1>QUELS LANGAGES ?</h1>
-			<br>
+			<h1>LES COACHS</h1>
+
+			<div class="row">
+				<div class="span3 center">
+					<em><img src='./images/mathieu.png' class='img-circle'></em>
+					<h4>MATHIEU RIPERT</h4>
+					<a href='http://www.linkedin.com/in/mathieuripert' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
+					<a href='https://twitter.com/mathieurip' target='_BLANK'><img src='./images/twitter.png' class='img-twitter'></a>
+					<a href='https://www.facebook.com/ripouze' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
+					<br/>
+
+				</div>
+
+				<div class="span3 center">
+					<em><img src='./images/boris.png' class='img-circle'></em>
+					<h4>BORIS PAILLARD</h4>
+					<a href='http://www.linkedin.com/pub/boris-paillard/70/226/867' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
+					<a href='https://www.facebook.com/boris.paillard' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
+					<br/>
+
+
+				</div>
+
+				<div class="span3 center">
+					
+					<em><img src='./images/mack.png' class='img-circle'></em>
+					<h4>MACK MCCONNEL</h4>
+					<a href='http://www.linkedin.com/pub/mack-mcconnell/16/61/b26' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
+					<a href='https://www.facebook.com/mackmackboback' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
+					<br/>
+					
+		
+				</div>	
+
+				<div class="span3 center">
+					
+					<em><img src='./images/olivier.png' class='img-circle'></em>
+					<h4>OLIVIER LANCE</h4>
+					<a href='http://www.linkedin.com/in/olivierlance' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
+					<a href='https://www.facebook.com/mackmackboback' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
+					<br/>
+					
+				</div>
+
+			</div>	
 		</div>
-		<div class="row-fluid" style="text-align:justify">
-			<div class="span4">
-				<h3>HTML/CSS/Bootstrap</h3>
-				<p>La base pour maîtriser son front end. Le socle sur lequel la plupart des sites actuels sont bâtis. Cette page de présentation par exemple utilise uniquement ces trois "technologies".</p>
-			</div>
-			<div class="span4">
-				<h3>Javascript/jQuery</h3>
-				<p>Faire vivre sa page avec des animations simples et efficaces.</p>
-			</div>
-			<div class="span4">
-				<h3>Ruby on Rails</h3>
-				<p>Le framework web "à la page". Simple, efficace, et bénéficiant de nombreuses librairies open source (intégration des API facebook/google/twitter/etc, système de paiement, de login, géolocalisation..)</p>
-			</div>
-		</div>		
 	</div>
 </div>
