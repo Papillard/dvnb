@@ -1,24 +1,22 @@
 <img src='./images/pavillon_flou.jpg' style="width:100%" id="pavillon"%>
 
 <div class="row-fluid dark" id="presentation">
-	<div class="container">
-		<div class="row-fluid">
-			<% if @notice_title %>
-				<% if @warning %>
-					<div class="span6" id="warning">
-				<% else %>
-					<div class="span6" id="notice">
-				<% end %>
-						<h3 style="color:whitesmoke"><%=@notice_title%></h3>
-						<h4 style="color:white"><%=@notice_desc%></h4>
-					</div>
+	<div class="row-fluid">
+		<% if @notice_title %>
+			<% if @warning %>
+				<div class="span5 offset1" id="warning">
+			<% else %>
+				<div class="span5 offset1" id="notice">
 			<% end %>
-			<div class="span6 pull-right", style="text-align:right">
-				<h1>DEV & BREAKFAST</h1> 
-				<h4>Codez 6h par jour<h4>
-				<h4>Créez votre site à la campagne</h4>
-				<h4>Collaborer avec des développeurs professionnels</h4>
-			</div>
+					<h3 style="color:whitesmoke"><%=@notice_title%></h3>
+					<h4 style="color:white"><%=@notice_desc%></h4>
+				</div>
+		<% end %>
+		<div class="span6 pull-right", style="text-align:right; padding-right:100px">
+			<h1>DEV & BREAKFAST</h1> 
+			<h4>Codez 6h par jour<h4>
+			<h4>Créez votre site à la campagne</h4>
+			<h4>Collaborer avec des développeurs professionnels</h4>
 		</div>
 	</div>
 </div>
@@ -30,51 +28,39 @@ $(function(){
 });
 </script>
 
-<div class="row-fluid light" id="inscription">
-	<div class="container">
-		<div class="span12">
-			<a href="/program" id="pgm-link"><h1>LE PROGRAME D&B</h1></a><br>			
-			<div class="row-fluid">
-				<div class="span6" style="padding-right:10px">
-					<p class='avg'><strong>Première semaine - 2000€ :</strong> Apprenez à développer une appli web.</p>
-					<p style="text-align:justify">De la meilleure façon ! Avec des cours intensifs donnés par des développeurs expérimentés. En alternant leçons théoriques, exercices, petits projets de groupe, discussion et échanges d'idées sur vos projets. Et en profitant aussi de l'air pur de la campagne, et de la gastronomie locale tant qu'à faire !<p>
-				</div>
+<div class="row-fluid light" id="description">
+	<div class="span8 offset2 container" style="text-align:center">
+		<p><strong>Première semaine :</strong> Apprenez à développer une appli web.</p>
+		<p><strong>Deuxième semaine :</strong> Développez vous-même votre site.</p>
+	</div>
+</div>
 
-				<div class="span6 pull-right" style="padding-left:10px">
-					<p class='avg'><strong>Deuxième semaine - 1500€ :</strong> Développez vous-même votre site.</p>
-					<p style="text-align:justify">Il faudra avoir suivi la première semaine de cours, ou être déjà bien aguerris à la programmation web. Tout le monde peut coder une web-app, à condition d'être bien encadré, de faire preuve de motivation et de persévérance ! d&b vous rembourse <strong>50%</strong> du prix de la semaine si vous ne venez pas à bout de votre maquette.</p>
-				</div>
+<div class="row-fluid light" id="inscription">
+	<div class="span8 offset2 container" style="text-align:center">
+		<% if @warning %>
+			<h4 style="color:orange">Entrez à nouveau votre mail !</h4>
+		<% end %>
+		<form accept-charset="UTF-8" action="/" class="form-inline" method="post">
+			<div style="margin:0;padding:0;display:inline">
+				<input name="utf8" type="hidden" value="✓">
+				<input name="authenticity_token" type="hidden" value="GshmGjsFxnGRTp6KCoAgUWIhfYVQWbdJLAC+6C9N+Pc=">
 			</div>
-			<br>
-			<% if @warning %>
-				<h4 style="color:orange">Entrez à nouveau votre mail !</h4>
-			<% end %>
-			<div class="row-fluid">
-				<div class="span12">
-					<form accept-charset="UTF-8" action="/" class="form-inline" method="post">
-						<div style="margin:0;padding:0;display:inline">
-							<input name="utf8" type="hidden" value="✓">
-							<input name="authenticity_token" type="hidden" value="GshmGjsFxnGRTp6KCoAgUWIhfYVQWbdJLAC+6C9N+Pc=">
-						</div>
-						<input id="email" name="email" placeholder="Laissez-nous votre email" type="email">
-						<input class="btn" name="commit" type="submit" value="Je suis intéressé">
-					</form>
-				</div>
-			</div>	
-		</div>
+			<input id="email" name="email" placeholder="Laissez-nous votre email" type="email">
+			<input class="btn" name="commit" type="submit" value="Je suis intéressé">
+		</form>
 	</div>
 </div>
 
 
+
 <div class="row-fluid green" id="coachs">
-	<div class="container">
-		<div class="span12 pull-right" style="text-align:right">
-			<h1>LES COACHS</h1>
+		<div class="span12 pull-right" style="text-align:center">
+			<h2>Ils coachent</h2>
 
 			<div class="row">
 				<div class="span3 center">
 					<em><img src='./images/mathieu.png' class='img-circle'></em>
-					<h4>MATHIEU RIPERT</h4>
+					<h4>Mathieu Ripert</h4>
 					<a href='http://www.linkedin.com/in/mathieuripert' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
 					<a href='https://twitter.com/mathieurip' target='_BLANK'><img src='./images/twitter.png' class='img-twitter'></a>
 					<a href='https://www.facebook.com/ripouze' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
@@ -84,7 +70,7 @@ $(function(){
 
 				<div class="span3 center">
 					<em><img src='./images/boris.png' class='img-circle'></em>
-					<h4>BORIS PAILLARD</h4>
+					<h4>Boris Paillard</h4>
 					<a href='http://www.linkedin.com/pub/boris-paillard/70/226/867' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
 					<a href='https://www.facebook.com/boris.paillard' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
 					<br/>
@@ -95,7 +81,7 @@ $(function(){
 				<div class="span3 center">
 					
 					<em><img src='./images/mack.png' class='img-circle'></em>
-					<h4>MACK MCCONNEL</h4>
+					<h4>Mack McConnel</h4>
 					<a href='http://www.linkedin.com/pub/mack-mcconnell/16/61/b26' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
 					<a href='https://www.facebook.com/mackmackboback' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
 					<br/>
@@ -106,7 +92,7 @@ $(function(){
 				<div class="span3 center">
 					
 					<em><img src='./images/olivier.png' class='img-circle'></em>
-					<h4>OLIVIER LANCE</h4>
+					<h4>Olivier Lance</h4>
 					<a href='http://www.linkedin.com/in/olivierlance' target='_BLANK'><img src='./images/linkedin.png' class='img-linkedin'></a>
 					<a href='https://www.facebook.com/mackmackboback' target='_BLANK'><img src='./images/facebook.png' class='img-twitter'></a>
 					<br/>

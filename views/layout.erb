@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>d&b</title>
+	<title>D&B</title>
 	<meta charset="utf-8">
 	<meta name="title" content="Dev&Breakfast" />
 	<meta name="description" content="Venez développer votre appli à la campagne !" />
@@ -13,11 +13,13 @@
 </head>
 <body>
 
-	<%= erb(:header, :layout => false) %>
+	<div class="overlay">
+		<%= erb(:header, :layout => false) %>
 
-	<%= yield %>
+		<%= yield %>
 	
-	<%= erb(:footer, :layout => false) %>
-
+		<%= erb(:footer, :layout => false) %>
+	</div>
+	
 </body>
 </html>

@@ -4,19 +4,15 @@
 
 
 body{
-	background-image: transparent;	
-	background-size: 1400px;
-	color:#333;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	padding-top:60px;
-	line-height:18px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	padding-top: 60px;
 }
 
-.container{
-	width: 1100px;
-}
 
-a {outline: none;color:rgba(26,155,77,1); }
+a {outline: none;color:rgba(245, 135, 0, 1); }
 a:hover{color:rgba(26,155,77,1); text-decoration:underline}
 a:focus{-moz-outline-style: none;}
 a:focus { outline:none }
@@ -25,16 +21,10 @@ h1,h2,h3{
 	font-family: 'ProximaNova-Bold','Arial';
 }
 
-h1{
-	font-size: 50px;
-	line-height: 50px;
+h1 {
+	font-size: 35px;
+	line-height: 45px;
 }
-
-h4,h5,h6{
-	font-family: 'ProximaNova-Regular','Arial';
-	font-weight: normal;
-}
-
 
 .center{text-align:center;}
 .left-align{text-align:left;}
@@ -48,15 +38,12 @@ h4,h5,h6{
 
 .navbar-fixed-top{
 	background-color:rgba(255,255,255,1);
-	border:0;
 	height:60px;
-	line-height:40px;
-	border-bottom:1px solid #f2f2f2;
+	line-height:60px;
+	border-bottom:1px solid #ccc;
 }
 
-.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-width: 1100px;
-}
+
 
 .navbar .brand{
 	color:#333;
@@ -78,7 +65,7 @@ width: 1100px;
 	vertical-align: middle;
 	cursor: pointer;
 	text-shadow: 0 0px 0px rgba(255, 255, 255, 1);	
-	background: rgba(71, 155, 62, 1);
+	background: rgba(245, 135, 0, 1);
 	text-decoration: none;
 	color:white;
 	padding:10px;
@@ -86,7 +73,7 @@ width: 1100px;
 }
 
 .btn:hover{
-	background: rgba(71, 155, 62, 0.6);
+	background:rgba(10,26,39,1);
 
 	color:white;
 }

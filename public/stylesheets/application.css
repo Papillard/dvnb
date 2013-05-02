@@ -1,9 +1,30 @@
+.overlay {
+	background-image: url('http://dvnbripert.herokuapp.com/images/dot-pattern-alpha.png');
+	background-repeat: repeat;
+	background-attachment: scroll;
+	-webkit-background-size: .25%;
+	-moz-background-size: .25%;
+	-o-background-size: .25%;
+	background-size: .25%;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+}
+
+.navbar .nav > li > a {
+	float: none;
+	padding: 0px 15px 10px;
+	color: #777777;
+	line-height: 60px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #ffffff;
+}
+
 #footer{
 	padding-top:30px;
 }
 
 #logo{
-	margin-top:15px;	
 }
 
 #pavillon{
@@ -20,23 +41,26 @@
 	width:850px;
 }
 
-#presentation{
-	color: white;
-	padding-top:60px;
-	padding-bottom:10px;
-	height:280px;
+#presentation {
+	color: whitesmoke;
+	padding-top: 45px;
+	padding-bottom: 50px;
 }
 
-#presentation h4{
-	font-size: 22px;
-	line-height:50px;
+#presentation h4 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+#description{
+	padding-top:50px;
+	padding-bottom:20px;
 }
 
 #inscription{
-	padding-top:50px;
-	padding-bottom:50px;
+	padding-top:0px;
+	padding-bottom:30px;
 }
-
 
 #coachs{
 	padding-top:30px;
@@ -46,7 +70,7 @@
 #program{
 	padding-top:50px;
 	padding-bottom:50px;
-	background:whitesmoke;
+	background:white;
 }
 
 
@@ -56,17 +80,17 @@
 }
 
 .light{
-	background: whitesmoke;
+	background: white;
 	color: rgb(50,50,50);
 }
 
 .green{
 	background: rgba(27, 97, 87, 1);
-	color: whitesmoke;
+	color: rgb(230,230,230);
 }
 
 #warning{
-	background: rgba(254, 67, 0,0.8);
+	background: rgba(245, 135, 0, 0.8);
 	color:white;
 	border-radius:10px;
 	padding-top:10px;
@@ -75,7 +99,7 @@
 }
 
 #notice{
-	background: rgba(71, 155, 62, 1);
+	background: rgba(27, 97, 87, 1);
 	color:white;
 	border-radius:10px;
 	padding-top:10px;
@@ -83,10 +107,6 @@
 	padding-left:10px;
 }
 
-.avg{
-	font-size: 18px;
-	line-height: 40px;
-}
 
 .img-circle{
 	width:100px;
