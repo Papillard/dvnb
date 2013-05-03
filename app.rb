@@ -11,8 +11,16 @@ class User
   include DataMapper::Resource
   property :id, Serial 
   property :email,  String 
-  validates_presence_of :email, :message => "Il nous faut une adresse email!"
-  validates_uniqueness_of :email, :message => "Nous avons déjà noté votre adresse email!"
+  
+  
+  property :email, String, :required => true, :unique => true,
+     :format   => :email_address,
+     :messages => {
+       :presence  => "Nous avons besoin d'une adresse email!",
+       :is_unique => "Nous avons déjà noté cette adresse email!",
+       :format    => "Cela ne ressemble pas à une adresse email :("
+     }
+  
 end
 
 DataMapper.finalize
@@ -52,15 +60,15 @@ end
 
 
 post "/" do 
-  puts params
   @user = User.new(:email=>params[:email])
   if(@user.save)
-    puts "user saved"
+    @message = "Merci! Nous vous contacterons très prochainement!"
   else
     @user.errors.each do |e|
         puts e
       end
   end
+  erb :landing_page
 end
 
 helpers do

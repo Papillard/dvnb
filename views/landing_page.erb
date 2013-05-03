@@ -14,20 +14,23 @@
 			<p><strong>Deuxième semaine:</strong> Développez vous-même la maquette de votre site.</p>
 			<p><small><a href="/programme">en savoir plus</a></small></p>
 			<br/>
+			
+			<% if @message %>
+				<%= @message %>
+				
+			<% else %>
 			<form  action="/" class="form-inline" method="post">
-				<input id="email" name="email" placeholder="Email" type="email" />
-				<input class="btn btn-success" name="commit" type="submit" value="Je suis intéressé" />
-			</form>	
-
-			<% if @notice_title %>
-				<% if @warning %>
-					<div id="warning">
-				<% else %>
-					<div id="notice">
-				<% end %>
-				<p><%=@notice_title%></p>
-				<p><%=@notice_desc%></p>
+				<div class="input-append">
+				  <input id="email" name="email" placeholder="Email" type="text" >
+				  <button class="btn btn-success" name="commit" type="submit" type="button">Je suis intéressé</button>
 				</div>
+			</form>
+			<% end %>
+		
+			<% if @user %>
+		    	<% @user.errors.each do |e| %>
+		        	<%= e[0] %>
+		     	<% end %>
 			<% end %>
 
 		</div>
