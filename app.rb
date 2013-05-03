@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
 require 'rubygems'
 require "sinatra"
 require 'data_mapper'
@@ -8,7 +11,8 @@ class User
   include DataMapper::Resource
   property :id, Serial 
   property :email,  String 
-  validates_presence_of :email
+  validates_presence_of :email, :message => "Il nous faut une adresse email!"
+  validates_uniqueness_of :email, :message => "Nous avons déjà noté votre adresse email!"
 end
 
 DataMapper.finalize
@@ -48,16 +52,15 @@ end
 
 
 post "/" do 
-  User.create(:email=>params[:email])
-  if params[:email].empty?
-    @warning = true
-    @notice_title = "Oups !"
-    @notice_desc = "Nous n'avons pas compris votre mail.."
+  puts params
+  @user = User.new(:email=>params[:email])
+  if(@user.save)
+    puts "user saved"
   else
-    @notice_title = "Merci, #{params[:email]}"
-    @notice_desc = "Nous vous contacterons pour le prochain D&B !"
+    @user.errors.each do |e|
+        puts e
+      end
   end
-  erb :landing_page
 end
 
 helpers do
