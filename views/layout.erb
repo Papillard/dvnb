@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>D&B</title>
-	<meta charset="utf-8">
+	<meta charset=utf-8 />
 	<meta name="title" content="Dev&Breakfast" />
 	<meta name="description" content="Venez développer votre appli à la campagne !" />
 	<link rel="image_src" href="https://www.dropbox.com/s/f69yrdrhp0yoyib/dnb.png" />
-	<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.css">	
-	<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap_and_overrides.css">	
-	<link rel="stylesheet" type="text/css" href="./stylesheets/application.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>	
+	
+	<link rel="stylesheet" href="/stylesheets/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap_and_overrides.css">	
+	<link rel="stylesheet" href="/stylesheets/application.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-
+	<img alt="pavillon" id="pavillon" src="/images/pavillon.jpg" width="100%" />
+	
 	<div class="overlay">
 		<%= erb(:header, :layout => false) %>
-
 		<%= yield %>
-	
 		<%= erb(:footer, :layout => false) %>
+		
 	</div>
 	
 </body>

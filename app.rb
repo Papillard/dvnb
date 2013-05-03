@@ -18,9 +18,34 @@ get "/" do
   erb :landing_page
 end
 
-get "/program" do
-  erb :program
+get "/programme" do
+  erb :programme
 end
+
+get '/tarifs' do
+  erb :tarifs
+end
+
+get '/equipe' do
+  erb :equipe
+end
+
+get '/contact' do
+  erb :contact
+end
+
+get '/jobs' do
+  erb :jobs
+end
+
+get '/legal' do
+  erb :legal
+end
+
+get '/about' do
+  erb :about
+end
+
 
 post "/" do 
   User.create(:email=>params[:email])
