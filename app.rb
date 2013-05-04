@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
 require 'rubygems'
 require "sinatra"
 require 'data_mapper'
@@ -8,7 +11,16 @@ class User
   include DataMapper::Resource
   property :id, Serial 
   property :email,  String 
-  validates_presence_of :email
+  
+  
+  property :email, String, :required => true, :unique => true,
+     :format   => :email_address,
+     :messages => {
+       :presence  => "Nous avons besoin d'une adresse email!",
+       :is_unique => "Nous avons déjà noté cette adresse email!",
+       :format    => "Cela ne ressemble pas à une adresse email :("
+     }
+  
 end
 
 DataMapper.finalize
@@ -18,19 +30,43 @@ get "/" do
   erb :landing_page
 end
 
-get "/program" do
-  erb :program
+get "/programme" do
+  erb :programme
 end
 
+get '/tarifs' do
+  erb :tarifs
+end
+
+get '/equipe' do
+  erb :equipe
+end
+
+get '/contact' do
+  erb :contact
+end
+
+get '/jobs' do
+  erb :jobs
+end
+
+get '/legal' do
+  erb :legal
+end
+
+get '/about' do
+  erb :about
+end
+
+
 post "/" do 
-  User.create(:email=>params[:email])
-  if params[:email].empty?
-    @warning = true
-    @notice_title = "Oups !"
-    @notice_desc = "Nous n'avons pas compris votre mail.."
+  @user = User.new(:email=>params[:email])
+  if(@user.save)
+    @message = "Merci! Nous vous contacterons très prochainement!"
   else
-    @notice_title = "Merci, #{params[:email]}"
-    @notice_desc = "Nous vous contacterons pour le prochain D&B !"
+    @user.errors.each do |e|
+        puts e
+      end
   end
   erb :landing_page
 end
