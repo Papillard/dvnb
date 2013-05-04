@@ -24,7 +24,7 @@ class User
 end
 
 DataMapper.finalize
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 get "/" do
   erb :landing_page
